@@ -39,7 +39,7 @@ fn main() -> anyhow::Result<()> {
         .with_max_level(tracing::Level::DEBUG)
         .init();
 
-    let (app, runner) = DenoKVService::new("../scripts");
+    let (app, runner) = DenoKVService::new("./scripts");
 
     let server = ServerBuilder::default().bind("127.0.0.1:26658", app)?;
     let server_url = server.local_addr();

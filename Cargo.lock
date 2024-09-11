@@ -337,6 +337,35 @@ dependencies = [
 ]
 
 [[package]]
+name = "comet-deno"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "bytes",
+ "deno_ast",
+ "deno_core",
+ "futures",
+ "pin-project",
+ "prost 0.13.2",
+ "reqwest",
+ "serde",
+ "serde_json",
+ "structopt",
+ "tendermint 0.39.1",
+ "tendermint-abci",
+ "tendermint-proto 0.39.1",
+ "tokio",
+ "tokio-stream",
+ "tokio-util 0.7.12",
+ "tower 0.5.1",
+ "tower-abci",
+ "tracing",
+ "tracing-subscriber",
+ "v8",
+]
+
+[[package]]
 name = "const-oid"
 version = "0.9.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -483,9 +512,9 @@ dependencies = [
 
 [[package]]
 name = "deno_core"
-version = "0.307.0"
+version = "0.308.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "154b0902402807a043579102f949e6dd6f3a09d2d5049929fd710fc3192bf109"
+checksum = "62fc8250fa9da059cc05b18328319a9048c73e4889ca929cc60877a8a1bfc4d4"
 dependencies = [
  "anyhow",
  "bincode",
@@ -510,7 +539,7 @@ dependencies = [
  "static_assertions",
  "tokio",
  "url",
- "v8 0.105.1",
+ "v8",
 ]
 
 [[package]]
@@ -532,9 +561,9 @@ dependencies = [
 
 [[package]]
 name = "deno_ops"
-version = "0.183.0"
+version = "0.184.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9114f9eb6419839f1ab9668f91c463238945bb974e1998629a703f72b4608daf"
+checksum = "24a465b7d691ad7cae41e8f51bd954b1e3ffd201b84dc30de2c16cf91034946e"
 dependencies = [
  "proc-macro-rules",
  "proc-macro2",
@@ -1168,35 +1197,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1868808506b929d7b0cfa8f75951347aa71bb21144b7791bae35d9bccfcfe37a"
 dependencies = [
  "wasm-bindgen",
-]
-
-[[package]]
-name = "kvstore-app"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "async-trait",
- "bytes",
- "deno_ast",
- "deno_core",
- "futures",
- "pin-project",
- "prost 0.13.2",
- "reqwest",
- "serde",
- "serde_json",
- "structopt",
- "tendermint 0.39.1",
- "tendermint-abci",
- "tendermint-proto 0.39.1",
- "tokio",
- "tokio-stream",
- "tokio-util 0.7.12",
- "tower 0.5.1",
- "tower-abci",
- "tracing",
- "tracing-subscriber",
- "v8 0.106.0",
 ]
 
 [[package]]
@@ -2127,15 +2127,15 @@ dependencies = [
 
 [[package]]
 name = "serde_v8"
-version = "0.216.0"
+version = "0.217.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1733b8192f123beedd2fc7998efeaf2a0b8bfa35c01537f50b690e786db8024c"
+checksum = "467c0a7bfc67cd918f1f7ab7a5ab70a9e744e466ff428cd728ff2c03bc77874c"
 dependencies = [
  "num-bigint",
  "serde",
  "smallvec",
  "thiserror",
- "v8 0.105.1",
+ "v8",
 ]
 
 [[package]]
@@ -3379,23 +3379,6 @@ name = "uuid"
 version = "1.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "81dfa00651efa65069b0b6b651f4aaa31ba9e3c3ce0137aaad053604ee7e0314"
-
-[[package]]
-name = "v8"
-version = "0.105.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b3f1b18ae89236d39abfa7136ec712f1d2daab61cddeef00b61a804e8a9b2dee"
-dependencies = [
- "bindgen",
- "bitflags 2.6.0",
- "fslock",
- "gzip-header",
- "home",
- "miniz_oxide 0.7.4",
- "once_cell",
- "paste",
- "which 6.0.3",
-]
 
 [[package]]
 name = "v8"
